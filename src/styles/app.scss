@@ -1,0 +1,64 @@
+$maxZIndex: 2147483638;
+$fonts: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+.m_screenrecorder {
+    font-family: $fonts;
+    
+    @import '~bootstrap';
+    
+    &-nocursor {
+        &, * {
+            cursor: none !important;
+        }
+    }
+
+    &-dot {
+        &, * {
+            cursor: none !important;
+        }
+    }
+}
+
+@mixin mouse_dot() {
+    display: inline-block;
+    width: var(--m_screenrecorder-mouse-dot-size);     
+    height: var(--m_screenrecorder-mouse-dot-size);     
+    background-color: var(--m_screenrecorder-mouse-dot-color);
+    opacity: var(--m_screenrecorder-mouse-dot-opacity);    
+    border-radius: 50%;    
+}
+
+#m_screenrecorder_settings_form_mouse_dot_preview {
+    text-align: center;
+    padding: 20px;
+    
+    &:after {
+        content: '';
+        @include mouse_dot();
+    }
+}
+
+#m_screenrecorder_settings_form_mouse_dot {
+    @include mouse_dot();
+    
+    position: fixed;
+    
+    left: var(--m_screenrecorder-mouse-x-pos);     
+    top: var(--m_screenrecorder-mouse-y-pos);     
+    
+    z-index: $maxZIndex;
+}
+
+#m_screenrecorder_delay_container {
+    font-family: $fonts;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 20vw;
+    opacity: .5;
+    pointer-events: none;
+    z-index: $maxZIndex;
+    /*width: 100vw;
+    height: 100vh;
+    */
+}

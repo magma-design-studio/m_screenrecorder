@@ -1,0 +1,82 @@
+<div class="m_screenrecorder">
+    <div class="modal fade show d-block" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">m screenrecorder – Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="m_screenrecorder_settings_form">
+                        <div class="form-group">
+                            <label for="m_screenrecorder_fields_mouse" class="col-form-label">Mouse type:</label>
+                            <select class="custom-select" id="m_screenrecorder_fields_mouse" name="mouse">
+                                <option selected value="mouse">Mouse</option>
+                                <option value="dot">Dot</option>
+                                <option value="none">None</option>
+                            </select>
+                        </div>
+                        <div id="m_screenrecorder_settings_form_mouse_dot_container" class="collapse">
+                            <label for="inputEmail4">Dot settings</label><br />
+                            <label for="inputEmail4">Dot preview</label>
+                            <div id="m_screenrecorder_settings_form_mouse_dot_preview"></div>
+                            <div class="form-group">
+                                <label for="m_screenrecorder_fields_mouse_dot_color">Color</label>
+                                <input type="color" class="form-control" id="m_screenrecorder_fields_mouse_dot_color" placeholder="auto" name="mouse_dot_color">
+                            </div>    
+                            <div class="form-group">
+                                <label for="m_screenrecorder_fields_mouse_dot_opacity">Opacity</label>
+                                <input type="range" class="form-control-range" id="m_screenrecorder_fields_mouse_dot_opacity" placeholder="auto" name="mouse_dot_opacity" min="0" max="1" step=".1">
+                            </div>    
+                            <div class="form-group">
+                                <label for="m_screenrecorder_fields_mouse_dot_size">Size (diameter)</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="m_screenrecorder_fields_mouse_dot_size" placeholder="auto" name="mouse_dot_size" min="1" value="10">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">px</span>
+                                    </div>                  
+                                </div>
+                            </div>                            
+                        </div>
+                        <label for="inputEmail4">Browser size</label>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="m_screenrecorder_fields_browser_width">Width</label>
+                                <input type="number" class="form-control" id="m_screenrecorder_fields_browser_width" placeholder="auto" disabled name="browser_width">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="m_screenrecorder_fields_browser_height">Height</label>
+                                <input type="number" class="form-control" id="m_screenrecorder_fields_browser_height" placeholder="auto" disabled name="browser_height">
+                            </div>
+                        </div>                        
+                        
+                        <div class="form-group">
+                            <label for="m_screenrecorder_fields_file_format" class="col-form-label">File format:</label>
+                            <select class="custom-select" id="m_screenrecorder_fields_file_format" name="file_format">
+                                <option selected value="webm">webm</option>
+                                <option value="mp4" disabled>mp4</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="m_screenrecorder_fields_delay" class="col-form-label">Delay:</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="m_screenrecorder_fields_delay" placeholder="auto" name="delay" value="3" step="1" min="0">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Seconds</span>
+                                </div>                                    
+                            </div>
+                        </div>                           
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" value="record">Aufnehmen</button>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>    
+</div>
