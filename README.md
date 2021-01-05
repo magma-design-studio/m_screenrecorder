@@ -21,4 +21,4 @@ You can change your default cursor to a custom sized and colored dot or just hid
 
 ## Known issues
 
-The m_screenrecorder works on many websites. A few prohibit the integration of external scripts (e.g. GitHub).
+The m_screenrecorder works on most websites. A few websites prohibit the integration of external scripts (e.g. GitHub).
