@@ -1,15 +1,18 @@
 {
-  "name": "magma-2020",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "m_screenrecorder",
+  "version": "1.0.1",
+  "description": "m_screenrecorder is an open source solution to film an interaction with a website or your screen.",
+  "main": "dist/m_screenrecorder.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magma-design-studio/m_screenrecorder"
+  },    
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
-    "build": "webpack --config webpack.config.js --mode=production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.js --mode=production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sebastian Tiede <info@magmadesignstudio.de>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -47,8 +50,6 @@
   "dependencies": {
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
-    "uglify-js": "^3.12.4",
-    "uglify-js-es6": "^2.8.9"
+    "popper.js": "^1.16.1"
   }
 }

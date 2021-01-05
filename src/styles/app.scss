@@ -20,6 +20,13 @@ $fonts: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Aria
         }
     }    
     
+    .modal {
+        z-index: ($maxZIndex)-10 !important;
+        &-backdrop {
+            z-index: ($maxZIndex)-20 !important;
+        }
+    }
+    
     @import "~bootstrap/scss/modal";
     @import "~bootstrap/scss/forms";
     @import "~bootstrap/scss/custom-forms";
