@@ -1,12 +1,12 @@
 {
   "name": "m_screenrecorder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "m_screenrecorder is an open source solution to film an interaction with a website or your screen.",
   "main": "dist/m_screenrecorder.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/magma-design-studio/m_screenrecorder"
-  },    
+  },
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
     "build": "webpack --config webpack.config.js --mode=production"
