@@ -7,7 +7,7 @@ m_screenrecorder is an open source solution to film an interaction with a websit
 Please copy the following JavaScript and create a bookmark in your browser and fill the link field with this snippet.
 
 ```
-javascript:(function(i,s,o,g,r,a,m){ i[r]={ start : 'autostart' };a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://cdn.jsdelivr.net/npm/m_screenrecorder@1.0.1/dist/m_screenrecorder.js','m_screenrecorder');
+javascript:(function(i,s,o,g,r,a,m){ i[r]={ start : 'autostart' };a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://cdn.jsdelivr.net/npm/m_screenrecorder/dist/m_screenrecorder.js','m_screenrecorder');
 ```
 
 ## Screenshots
