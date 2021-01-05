@@ -1,6 +1,6 @@
 {
   "name": "m_screenrecorder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "m_screenrecorder is an open source solution to film an interaction with a website or your screen.",
   "main": "dist/m_screenrecorder.js",
   "repository": {
