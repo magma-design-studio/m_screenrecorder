@@ -2,7 +2,7 @@
 
 m_screenrecorder is an open source solution to film an interaction with a website or your screen.
 
-Have a look at the ![Demo](https://magma-design-studio.github.io/m_screenrecorder/).
+Have a look at the [Demo](https://magma-design-studio.github.io/m_screenrecorder/).
 
 ## Usage
 
