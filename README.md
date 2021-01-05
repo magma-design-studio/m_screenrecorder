@@ -17,3 +17,8 @@ javascript:(function(i,s,o,g,r,a,m){ i[r]={ start : 'autostart' };a=s.createElem
 ![Change your default cursor](/demo/m_screenrecorder_mouse-setting.png?raw=true)
 
 You can change your default cursor to a custom sized and colored dot or just hide it.
+
+
+## Known issues
+
+The m_screenrecorder works on many websites. A few prohibit the integration of external scripts (e.g. GitHub).
