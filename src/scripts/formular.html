@@ -41,14 +41,17 @@
                             </div>                            
                         </div>
                         <label for="inputEmail4">Browser size</label>
+                        <div class="alert alert-info small" role="alert">
+                            Browser resizing is not working in Chrome and Opera! In this case may try the console.
+                        </div>                        
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="m_screenrecorder_fields_browser_width">Width</label>
-                                <input type="number" class="form-control" id="m_screenrecorder_fields_browser_width" placeholder="auto" disabled name="browser_width">
+                                <input type="number" class="form-control" id="m_screenrecorder_fields_browser_width" placeholder="auto" name="browser_width">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="m_screenrecorder_fields_browser_height">Height</label>
-                                <input type="number" class="form-control" id="m_screenrecorder_fields_browser_height" placeholder="auto" disabled name="browser_height">
+                                <input type="number" class="form-control" id="m_screenrecorder_fields_browser_height" placeholder="auto" name="browser_height">
                             </div>
                         </div>                        
                         
@@ -63,7 +66,7 @@
                         <div class="form-group">
                             <label for="m_screenrecorder_fields_delay" class="col-form-label">Delay:</label>
                             <div class="input-group">
-                                <input type="number" class="form-control" id="m_screenrecorder_fields_delay" placeholder="auto" name="delay" value="3" step="1" min="0">
+                                <input type="number" class="form-control" id="m_screenrecorder_fields_delay" placeholder="auto" name="delay" value="0" step="1" min="0">
                                 <div class="input-group-append">
                                     <span class="input-group-text">Seconds</span>
                                 </div>                                    
@@ -73,10 +76,17 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal" value="record">Aufnehmen</button>
+                    <a class="github-button" href="https://github.com/magma-design-studio/m_screenrecorder/subscription" data-show-count="true" aria-label="Watch magma-design-studio/m_screenrecorder on GitHub">Watch</a>  
+                    <script async defer src="https://buttons.github.io/buttons.js"></script>                    
+                    
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" value="record">Start recording</button>
+                    <div class="alert alert-info small" role="alert">
+                        <p>Please press <kbd>esc</kbd> to end the recording!</p>
+                        <p class="mb-0">After click on “Start recording”, a browser-specific popup opens in which the recording window must be selected and the recording must be confirmed.</p>
+                    </div>                            
                 </div>                
             </div>
         </div>
     </div>
-    <div class="modal-backdrop fade show"></div>    
+    <div class="modal-backdrop fade"></div>    
 </div>

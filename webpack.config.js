@@ -8,11 +8,13 @@ const autoprefixer = require('autoprefixer');
 //const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
-const isDevelopment = process.env.NODE_ENV !== 'production';
+const isDevelopment = !(/production/.test(process.env.npm_lifecycle_script));
 
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
+const Handlebars = require('handlebars');
+const rawLoader = require('raw-loader');
+const toStringLoader = require('to-string-loader');
 
 module.exports = {
     mode: isDevelopment ? 'development' : 'production',    
@@ -20,7 +22,7 @@ module.exports = {
         fs: "empty"
     },
     entry: {
-        bundle: './src/index.js'
+        m_screenrecorder: './src/index.js'
     } ,
     output: {
         path: path.resolve(__dirname, 'dist')
@@ -41,10 +43,17 @@ module.exports = {
         }        
     },    
     module: {
-        rules: [     
+        rules: [    
+            {
+                test: /index\.html$/i,
+                loader: 'html-loader',
+                options: {
+                    
+                }, 
+            },    
             {
                 test: /\.m?js$/,
-                exclude: /(node_modules|bower_components|service\-worker\.js)/,
+                exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -92,12 +101,11 @@ module.exports = {
         ] 
     },
     plugins: [    
-        new WorkboxPlugin.GenerateSW(),
-        /*
+        
+        //new WorkboxPlugin.GenerateSW(),
+        
         new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery"
-        }),   */
+        }),   
        
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
@@ -112,28 +120,26 @@ module.exports = {
             }
         }), 
 
-        new HtmlWebpackPlugin()       
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'src/index.html'
+        })       
         
 
       ]
   };
 
 if(!isDevelopment) {
-    module.exports.devServer = false;    
+    module.exports.devServer = {};    
     
     module.exports.plugins.optimization = { minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})] };    
     
     
     module.exports.plugins = [    
-        new WorkboxPlugin.GenerateSW(),   
-
-
-        new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: 'app.css',
-            chunkFilename: '[id].css',
-        }),    
+        //new WorkboxPlugin.GenerateSW(),   
+        
+        new webpack.ProvidePlugin({
+        }),           
 
         new webpack.LoaderOptionsPlugin({
             options: {
@@ -141,6 +147,10 @@ if(!isDevelopment) {
             }
         }),      
 
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'src/index.html'
+        })               
 
       ];
 } else {
