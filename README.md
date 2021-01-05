@@ -12,8 +12,8 @@ javascript:(function(i,s,o,g,r,a,m){ i[r]={ start : 'autostart' };a=s.createElem
 
 ## Screenshots
 
-![Initial view](/magma-design-studio/m_screenrecorder/raw/demo/m_screenrecorder_initial.png?raw=true)
+![Initial view](/demo/m_screenrecorder_initial.png?raw=true)
 
-![Change your default cursor](/magma-design-studio/m_screenrecorder/raw/demo/m_screenrecorder_mouse-setting.png?raw=true)
+![Change your default cursor](/demo/m_screenrecorder_mouse-setting.png?raw=true)
 
 You can change your default cursor to a custom sized and colored dot or just hide it.
